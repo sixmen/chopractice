@@ -9,7 +9,15 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
+  ignorePatterns: ['.eslintrc.js'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: __dirname,
+      },
+    },
   },
 };
